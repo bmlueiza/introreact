@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Header() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <header>
+      <nav>
+        <h1>hola mundo</h1>
+      </nav>
+    </header>
+  );
 }
 
-export default App
+function Main() {
+  return (
+    <main>
+      <section>
+        <article>articulo</article>
+      </section>
+    </main>
+  );
+}
+
+function Footer() {
+  return <footer>@copy; 2024</footer>;
+}
+
+function App() {
+  return (
+    <>
+      {console.log(
+        "este es un render donde se muestra el header, main y footer. Se retorna pseudo html con jsx"
+      )}
+      {console.log(
+        "No se puede retornar dos elementos html sin un contenedor padre, por eso se usa el fragment <></>"
+      )}
+      {console.log("para escribir codigo js se usa {} ")}
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
+}
+
+export default App;
