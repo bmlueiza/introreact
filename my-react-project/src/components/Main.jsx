@@ -2,11 +2,11 @@ import React from "react";
 
 //Componente Main
 
-export default function Main() {
+export default function Main({ children }) {
   return (
     <main>
       <section>
-        <article>articulo</article>
+        <article>{children}</article>
       </section>
     </main>
   );
